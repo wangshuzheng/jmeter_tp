@@ -140,9 +140,9 @@ public class JtlResolverNew {
         Map<String, Integer> tps = new HashMap<>(10);
         HashMap<String, Integer> tprs = new HashMap<>(10);
         if (null != tpList && !tpList.isEmpty()) {
-            int fenZi = 1000;
+            int denominator = 1000;
             for (String tp : tpList.split(",")) {
-                int tpVal = (int) ((count * Long.parseLong(tp)) / fenZi);
+                int tpVal = (int) ((count * Long.parseLong(tp)) / denominator);
                 tps.put(tp, tpVal);
                 tprs.put(tp, 0);
             }
